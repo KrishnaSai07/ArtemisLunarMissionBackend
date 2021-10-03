@@ -9,7 +9,7 @@ const getConnection = ()=>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      }
@@ -28,7 +28,7 @@ const verifyAccount = (username) =>{
         host:'127.0.0.1',
         port:3306,
         user:'root',
-        password:'davidsilva',
+        password: '',
         database: 'artemisLunarMission'
     });
  
@@ -53,7 +53,7 @@ const verifyAccount = (username) =>{
         host:'127.0.0.1',
         port:3306,
         user:'root',
-        password:'davidsilva',
+        password: '',
         database: 'artemisLunarMission'
     });
  
@@ -87,7 +87,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -113,7 +113,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -140,7 +140,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -166,7 +166,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -187,21 +187,25 @@ const verifyAccount = (username) =>{
 
   }
 
-  const savePosts = (data) =>{
-    return new Promise(function(resolve,reject) { 
   
+  const savePosts = (data) =>{
+    return new Promise( async function(resolve,reject) { 
+  
+        let tempEmail = await getEmail(data.username);
+        let email = tempEmail[0].email
+
         var connection = mysql.createConnection({
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
         
         connection.connect()
         
-        connection.query('INSERT INTO posts (subject,context,access,username,email,files,postTime) VALUES(?,?,?,?,?,?,?)',[data.subject,data.context,data.access,data.username,data.email,data.files,data.postTime], function (error, results, fields) {
+        connection.query('INSERT INTO posts (subject,context,access,username,email,files,postTime) VALUES(?,?,?,?,?,?,?)',[data.subject,data.context,data.access,data.username,email,data.files,data.postTime], function (error, results, fields) {
             if (error){ 
                 console.log(error);
                 reject(false) };
@@ -220,7 +224,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -245,7 +249,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -269,7 +273,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -309,7 +313,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -333,7 +337,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -358,7 +362,7 @@ const verifyAccount = (username) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
@@ -382,7 +386,7 @@ const getSharedPostsById = (id) =>{
             host:'127.0.0.1',
             port:3306,
             user:'root',
-            password:'davidsilva',
+            password: '',
             database: 'artemisLunarMission'
         });
      
