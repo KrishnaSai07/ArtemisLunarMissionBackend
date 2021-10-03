@@ -33,7 +33,7 @@ _______________________________________
 
 ---------------- LOAD THE DATA USING LOAD DATA INFILE WAY ------------------
 
-Aftr cloning the project replace project path with 'Your Project Path' term below
+Aftr cloning the project replace project path with 'Your Project Path' term below and run the below command on MySQL command line client
 
 LOAD DATA LOCAL INFILE 'Your Project Path/credentials.txt' INTO TABLE artemisLunarMission.loginDetails
 FIELDS TERMINATED BY ';'
