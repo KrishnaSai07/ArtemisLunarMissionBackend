@@ -1,0 +1,2 @@
+1;Surface Info;The moon's surface is covered with dead volcanoes, impact craters, and lava flows, some visible to the unaided stargazer;public;Leonard Hofstader;leonard.Hofstader@gmail.com;moonSurface.jpg;2021-05-09 12:33:45
+2;Orbital Info;With a mean orbital velocity of 1.022 km/s (0.635 miles/s), the Moon covers a distance approximately its diameter, or about half a degree on the celestial sphere, each hour;public;Leonard Hofstader;leonard.Hofstader@gmail.com;moonOrbital.jpg;2021-05-19 09:33:45
